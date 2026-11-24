@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:text="Perfil y Cuenta"
         android:textColor="@android:color/white"
         android:textSize="20sp"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="4dp"
-        android:text="Gestión de perfil y parámetros operativos del Centro"
+        android:text="Datos de la corporación, base operativa y guardia"
         android:textColor="#94A3B8"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +52,7 @@
             android:paddingHorizontal="20dp"
             android:paddingBottom="16dp">
 
-            <!-- TARJETA 1: INFORMACIÓN PERSONAL Y DE CREDENCIALIZACIÓN -->
+            <!-- TARJETA 1: RESPONSABLE Y ACCESO -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -70,17 +70,17 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="IDENTIFICACIÓN DEL OPERADOR"
+                        android:text="RESPONSABLE Y CUENTA DE ACCESO"
                         android:textColor="#38BDF8"
                         android:textSize="12sp"
                         android:textStyle="bold" />
 
-                    <!-- Nombre Completo -->
+                    <!-- Responsable a cargo -->
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:hint="Nombre completo"
+                        android:hint="Nombre del responsable a cargo"
                         app:boxBackgroundMode="outline"
                         app:boxCornerRadiusBottomEnd="12dp"
                         app:boxCornerRadiusBottomStart="12dp"
@@ -93,17 +93,16 @@
                             android:id="@+id/etNombreOperador"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Operador Central"
                             android:textColor="@android:color/white"
                             android:textSize="14sp" />
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <!-- ID de Operador / Placa -->
+                    <!-- ID de Operador / Matrícula -->
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:hint="ID de Operador / Matrícula"
+                        android:hint="ID de Unidad / Matrícula"
                         app:boxBackgroundMode="outline"
                         app:boxCornerRadiusBottomEnd="12dp"
                         app:boxCornerRadiusBottomStart="12dp"
@@ -116,7 +115,6 @@
                             android:id="@+id/etMatriculaOperador"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="OP-URUA-409"
                             android:textColor="@android:color/white"
                             android:textSize="14sp" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -126,7 +124,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:hint="Correo electrónico"
+                        android:hint="Correo electrónico de acceso"
                         app:boxBackgroundMode="outline"
                         app:boxCornerRadiusBottomEnd="12dp"
                         app:boxCornerRadiusBottomStart="12dp"
@@ -139,17 +137,17 @@
                             android:id="@+id/etCorreoOperador"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="operador.uruapan@centrodedatos.mx"
+                            android:inputType="textEmailAddress"
                             android:textColor="@android:color/white"
                             android:textSize="14sp" />
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <!-- Teléfono Personal / Radio -->
+                    <!-- Teléfono de la Base / Central -->
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:hint="Teléfono de contacto / Emergencia"
+                        android:hint="Teléfono de la base / Central"
                         app:boxBackgroundMode="outline"
                         app:boxCornerRadiusBottomEnd="12dp"
                         app:boxCornerRadiusBottomStart="12dp"
@@ -163,7 +161,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="phone"
-                            android:text="+52 452 555 0192"
                             android:textColor="@android:color/white"
                             android:textSize="14sp" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -171,7 +168,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- TARJETA 2: DATOS OPERATIVOS Y DE GUARDIA -->
+            <!-- TARJETA 2: CORPORACIÓN Y BASE OPERATIVA -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -189,17 +186,17 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CONFIGURACIÓN DE GUARDIA Y RADIO"
+                        android:text="CORPORACIÓN Y BASE OPERATIVA"
                         android:textColor="#38BDF8"
                         android:textSize="12sp"
                         android:textStyle="bold" />
 
-                    <!-- Corporación Asignada -->
+                    <!-- Nombre de la Corporación / Brigada -->
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:hint="Corporación asignada"
+                        android:hint="Nombre de la Corporación / Brigada"
                         app:boxBackgroundMode="outline"
                         app:boxCornerRadiusBottomEnd="12dp"
                         app:boxCornerRadiusBottomStart="12dp"
@@ -212,12 +209,33 @@
                             android:id="@+id/etCorporacionAsignada"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Protección Civil Uruapan"
                             android:textColor="@android:color/white"
                             android:textSize="14sp" />
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <!-- Turno Actual -->
+                    <!-- Dirección de la Base Operativa -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:hint="Dirección de la base operativa"
+                        app:boxBackgroundMode="outline"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxStrokeColor="#38BDF8"
+                        app:hintTextColor="#38BDF8">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etDireccionBase"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Turno Actual
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -235,33 +253,9 @@
                             android:id="@+id/etTurnoGuardia"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Matutino (06:00 - 14:00 hrs)"
                             android:textColor="@android:color/white"
                             android:textSize="14sp" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <!-- Frecuencia de Radio / Canal -->
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:hint="Frecuencia / Canal de Radio"
-                        app:boxBackgroundMode="outline"
-                        app:boxCornerRadiusBottomEnd="12dp"
-                        app:boxCornerRadiusBottomStart="12dp"
-                        app:boxCornerRadiusTopEnd="12dp"
-                        app:boxCornerRadiusTopStart="12dp"
-                        app:boxStrokeColor="#38BDF8"
-                        app:hintTextColor="#38BDF8">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/etDireccionBase"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Boulevard Lázaro Cárdenas #1220, Centro, Uruapan"
-                            android:textColor="@android:color/white"
-                            android:textSize="14sp" />
-                    </com.google.android.material.textfield.TextInputLayout>
+                    </com.google.android.material.textfield.TextInputLayout> -->
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

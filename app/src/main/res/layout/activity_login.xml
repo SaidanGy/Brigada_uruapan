@@ -71,6 +71,8 @@
         app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
     <!-- Tarjeta Oscura con Inputs (Email + Password) -->
+
+    <!-- Botón Entrar -->
     <LinearLayout
         android:id="@+id/cardForm"
         android:layout_width="match_parent"
@@ -81,6 +83,7 @@
         android:padding="20dp"
         app:layout_constraintBottom_toTopOf="@+id/btnLogin"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSubtitle">
 
@@ -98,7 +101,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:background="@null"
-            android:hint="ejemplo@gmail.com"
+            android:hint="Ingrese su correo"
             android:inputType="textEmailAddress"
             android:textColor="@color/login_text_white"
             android:textColorHint="#80FFFFFF"
@@ -120,20 +123,31 @@
             android:textColor="@color/login_text_subtitle"
             android:textSize="12sp" />
 
-        <EditText
-            android:id="@+id/etPassword"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:background="@null"
-            android:hint="••••••••••••"
-            android:inputType="textPassword"
-            android:textColor="@color/login_text_white"
+            android:layout_marginBottom="16dp"
+            android:hint="Ingrese Contraseña"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
             android:textColorHint="#80FFFFFF"
-            android:textSize="16sp" />
+            app:hintTextColor="#38BDF8"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColorHint="#80FFFFFF"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
     </LinearLayout>
 
-    <!-- Botón Entrar -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"

@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -10,7 +14,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.BrigadaUruapanClient">
+        android:theme="@style/Theme.BrigadaUruapanClient"
+        android:usesCleartextTraffic="true">
 
         <!-- Actividad Principal (Mapa / Home) -->
         <activity
@@ -31,6 +36,7 @@
         <activity
             android:name=".CuentaActivity"
             android:exported="false" />
+
         <activity
             android:name=".LoginActivity"
             android:exported="true"
@@ -40,23 +46,31 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />
+
         <activity
             android:name=".RegistrarOrganizacionActivity"
             android:exported="false" />
+a
         <activity
             android:name=".UserMainActivity"
             android:exported="false" />
+
         <activity
             android:name=".UserCuentaActivity"
-            android:exported="false" />+
+            android:exported="false" />
+
         <activity
             android:name=".UserHistorialActivity"
             android:exported="false" />
 
-        <activity android:name=".SolicitarBrigadaActivity" android:exported="false" />
+        <activity
+            android:name=".SolicitarBrigadaActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
