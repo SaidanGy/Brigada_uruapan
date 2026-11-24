@@ -13,11 +13,14 @@ spring:
       max-lifetime: 600000
   jpa:
     hibernate:
+       # ddl-auto: none
       ddl-auto: validate
+      #ddl-auto: update
     open-in-view: false
   flyway:
     enabled: true
-    url: ${DB_MIGRATION_URL:${DB_URL}}
+    baseline-on-migrate: true
+    url: ${DB_URL}
     user: ${DB_USER}
     password: ${DB_PASSWORD}
     locations: classpath:db/migration
@@ -53,9 +56,9 @@ app:
     expiration-minutes: 60
   dispatch:
     offers-per-round: 3
-    offer-ttl-seconds: 30
+    offer-ttl-seconds: 300
     radius-km-rounds: [5, 10, 20]
-    location-max-age-seconds: 120
+    location-max-age-seconds: 3600
     expiration-scan-ms: 5000
   location:
     max-future-seconds: 60
